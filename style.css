@@ -26,15 +26,16 @@
 .box{
     border: 1px solid black;
     width: 400px;
-    height: 50vh;
+    height: 55vh;
     border-radius: 20px;
     display:flex;
     flex-direction: column;
     /* align-items: center; */
     padding-top: 5vh;
+    background-color: #dde5f4;
     
 }
-.box p{
+.login p{
     font-size: 1.25rem;
 }
 
@@ -57,7 +58,27 @@
 
 .login-input input{
     width: 300px;
-    height: 5vh;
+    height: 6vh;
     text-align: center;
     border-radius: 20px;
 }
+
+.login-content button{
+    width:250px;
+    height:5vh;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    background-color: #3d4785;
+    color: white
+}
+
+.box-footer{
+    display:flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* register */
+
+
