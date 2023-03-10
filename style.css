@@ -52,8 +52,6 @@
 
 .login-input{
     margin-bottom: 40px;
-    /* position: relative;
-    left: 10px */
 }
 
 .login-input input{
@@ -80,5 +78,59 @@
 }
 
 /* register */
+
+.register-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.register-box{
+    border: 1px solid black;
+    width: 600px;
+    height: 70vh;
+    border-radius: 20px;
+    display:flex;
+    flex-direction: column;
+    padding-top: 5vh;
+    background-color: #dde5f4;
+    
+}
+.register p{
+    font-size: 1.25rem;
+}
+
+.register{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.register-content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-input{
+    margin-bottom: 40px;
+}
+
+.register-input input{
+    width: 400px;
+    height: 6vh;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.register-content button{
+    width:250px;
+    height:5vh;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    background-color: #3d4785;
+    color: white
+}
+
+
 
 
