@@ -136,7 +136,7 @@
 
 /* admin */
 
-.patient{
+/* .patient{
     margin-top: 20px;
     padding-left: 20px;
     display:flex;
@@ -161,6 +161,47 @@
 }
 .line{
     margin-top: 40px;
+}
+
+.employee{
+    margin-top: 20px;
+    padding-left: 20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.employee-header p{
+    font-size: 1.25rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.employee-content{
+    display:flex;
+    justify-content: space-around;
+} */
+
+/* admin panel */
+
+.admin-panel{
+    display:flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.admin-header{
+    text-align: center;
+}
+
+.admin-header p{
+    font-size: 1.25rem;
+}
+
+.panel-content{
+    display:flex;
+    justify-content: space-around;
+    height:40vh;
+    align-items: center;
 }
 
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="patient">
+        <div class="patient-header">
+            <p>Patient</p>
+        </div>
+        <form class="patient-content">
+            <div class="drop-down">
+                <label for="patient">Choose patient:</label>
+                <select name="patient" id="patient">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <div class="drop-down">
+                <label for="hospital">Choose hospital:</label>
+                <select name="hospital" id="hospital">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div class="line">
+        <hr>
+    </div>
+    <div class="employee">
+        <div class="employee-header">
+            <p>Employee</p>
+        </div>
+        <form class="employee-content">
+            <div class="drop-down">
+                <label for="employee">Choose employee:</label>
+                <select name="employee" id="employee">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <div class="drop-down">
+                <label for="hospital">Choose hospital(s):</label>
+                <select name="hospital" id="hospital" multiple>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div class="line">
+        <hr>
+    </div>
+</body>
+</html>
