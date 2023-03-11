@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Assign employee</title>
+</head>
+<body>
+    <header class="header">
+        <div class="name">
+            <p>Hospitals management system</p>
+        </div>
+    </header>
+    <div class="employee">
+        <div class="employee-header">
+            <p>Employee</p>
+        </div>
+        <form class="employee-content">
+            <div class="drop-down">
+                <label for="employee">Choose employee:</label>
+                <select name="employee" id="employee">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <div class="drop-down">
+                <label for="hospital">Choose hospital(s):</label>
+                <select name="hospital" id="hospital" multiple>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <script src="axios.min.js"></script>
+    <scrip src="javascript/admin.js"></scrip>
+</body>
+</html>
