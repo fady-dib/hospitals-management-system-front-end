@@ -149,10 +149,18 @@
     margin-bottom: 20px;
 }
 
+.patient-content{
+    display:flex;
+    justify-content: space-around;
+}
+
 .drop-down select{
     width: 150px;
     text-align: center;
     margin-left: 20px;
+}
+.line{
+    margin-top: 40px;
 }
 
 

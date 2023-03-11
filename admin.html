@@ -19,18 +19,28 @@
         <div class="patient-header">
             <p>Patient</p>
         </div>
-        <div class="patient-content">
-            <form>
-                <div class="drop-down">
-                    <label for="hospitals">Choose a hospital:</label>
-                    <select name="hospitals" id="hospitals">
-                        <option value="a">a</option>
-                        <option value="b">b</option>
-                        <option value="c">c</option>
-                    </select>
-                </div>
-            </form>
-        </div>
+        <form class="patient-content">
+            <div class="drop-down">
+                <label for="patient">Choose patient:</label>
+                <select name="patient" id="patient">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <div class="drop-down">
+                <label for="hospital">Choose hospital:</label>
+                <select name="hospital" id="hospital">
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="c">c</option>
+                </select>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div class="line">
+        <hr>
     </div>
     <script src="axios.min.js"></script>
     <scrip src="javascript/admin.js"></scrip>
