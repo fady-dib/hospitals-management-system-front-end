@@ -1,3 +1,7 @@
+:root {
+    --blue-color: #3d4785;
+    --lightblue-color: #dde5f4;
+}
 *{
     margin: 0px;
     padding: 0px;
@@ -30,9 +34,8 @@
     border-radius: 20px;
     display:flex;
     flex-direction: column;
-    /* align-items: center; */
     padding-top: 5vh;
-    background-color: #dde5f4;
+    background-color:var(--lightblue-color);
     
 }
 .login p{
@@ -66,7 +69,7 @@
     height:5vh;
     border-radius: 20px;
     margin-bottom: 40px;
-    background-color: #3d4785;
+    background-color: var(--blue-color);
     color: white
 }
 
@@ -94,7 +97,7 @@
     display:flex;
     flex-direction: column;
     padding-top: 5vh;
-    background-color: #dde5f4;
+    background-color:var(--lightblue-color);
     
 }
 .register p{
@@ -127,10 +130,29 @@
     height:5vh;
     border-radius: 20px;
     margin-bottom: 40px;
-    background-color: #3d4785;
+    background-color:var(--blue-color);
     color: white
 }
 
+/* admin */
 
+.patient{
+    margin-top: 20px;
+    padding-left: 20px;
+    display:flex;
+    flex-direction: column;
+}
+
+.patient-header p{
+    font-size: 1.25rem;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+.drop-down select{
+    width: 150px;
+    text-align: center;
+    margin-left: 20px;
+}
 
 
