@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Admin</title>
+    <title>Statistics</title>
 </head>
-
 <body>
     <header class="header">
         <div class="name">
             <p>Hospitals management system</p>
         </div>
     </header>
-    <div class="admin-panel">
-        <div class="admin-header">
-            <p>Admin panel</p>
-        </div>
-        <div class="panel-content">
-            <a href="./assign-patient.html">Assign patient</a>
-            <a href="./assign-employee.html">Assign employee</a>
-            <a href="#">Services</a>
-            <a href="#">Statistics</a>
-        </div>
+    <div class="statistics-content">
+        <div class="female-num">
+            <label for="female">Number of female employees:</label>
+            <input id="female" disabled>
+        </div> 
     </div>
-   
     <script src="axios.min.js"></script>
-    <scrip src="javascript/admin.js"></scrip>
+    <scrip src="script.js"></scrip>
 </body>
-
 </html>

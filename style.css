@@ -203,4 +203,14 @@
     align-items: center;
 }
 
+/* statistics */
 
+.statistics-content{
+    margin-top: 40px;
+    padding: 20px
+}
+
+.female-num input{
+margin-left: 20px;
+width: 60px
+}
