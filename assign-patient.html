@@ -21,23 +21,23 @@
             <div class="drop-down">
                 <label for="patient">Choose patient:</label>
                 <select name="patient" id="patient">
-                    <option value="a">a</option>
+                    <!-- <option value="a">a</option>
                     <option value="b">b</option>
-                    <option value="c">c</option>
+                    <option value="c">c</option> -->
                 </select>
             </div>
-            <div class="drop-down">
+            <div class="drop-down" id="hospital-dropdown">
                 <label for="hospital">Choose hospital:</label>
                 <select name="hospital" id="hospital">
-                    <option value="a">a</option>
+                    <!-- <option value="a">a</option>
                     <option value="b">b</option>
-                    <option value="c">c</option>
+                    <option value="c"></option> -->
                 </select>
             </div>
-            <button type="submit">Add</button>
+            <button type="submit" onclick="add()">Add</button>
         </form>
     </div>
     <script src="axios.min.js"></script>
-    <scrip src="script.js"></scrip>
+    <script src="./javascript/assign-patient.js"></script>
 </body>
 </html>
