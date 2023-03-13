@@ -33,8 +33,6 @@
 const submit = () => {
 const email = document.getElementById('email').value;
 const password = document.getElementById('password').value;
-  
-    console.log('abc')
 
     let data = new FormData();
     data.append('email', email);
@@ -43,12 +41,15 @@ const password = document.getElementById('password').value;
         if(res.data.response == 'Loggedin' ){
             if(res.data.response.usertype == 1){
                 location.replace('')
+                console.log(res.data.response.response)
             }
             else if(res.data.response.usertype == 2){
                 location.replace('patient.html')
+                console.log(res.data.response.response)
             }
             else{
                 location.replace('admin-panel.html');
+                console.log(res.data.response.response)
             }
             window.localStorage.setItem('usertype', res.data.response.usertype_id);
             window.localStorage.setItem('user_id', res.data.response.user_id)
