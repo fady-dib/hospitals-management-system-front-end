@@ -28,3 +28,21 @@ window.onload = function(){
         }
     })
 }
+
+const add = () => {
+    const hospital_dropdown = document.getElementById('hospital').value;
+    const patient_dropdown = document.getElementById('patient').value;
+    let data = new FormData();
+    data.append('patient_id', patient_dropdown);
+    data.append('hospital_id', hospital_dropdown)
+    axios.post('http://localhost:8080/hospitals-backend/assign-patient.php', data).then(function(res){
+       if(res.data.response == 'Patient was succesfuly assigned'){
+        alert('Patient was succesfuly assigned to a hospital')
+       }
+       else{
+        alert('operation failed')
+       }
+    }).catch(function(error){
+        console.log(error)
+    })
+}
