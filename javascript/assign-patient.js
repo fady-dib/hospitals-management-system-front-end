@@ -18,11 +18,11 @@ window.onload = function(){
             let patient_html ="";
             let hospital_html = "";
             for (i=0; i<patients.length;i++){
-                patient_html += `<option value="${patients[i].patient_id}">${patients[i].patient_name}</option>"`
+                patient_html += `<option value="${patients[i].patient_id}">${patients[i].patient_name}</option>`
                 patient_dropdown.innerHTML = patient_html;
             }
             for (i=0; i<hospitals.length;i++){
-                hospital_html += `<option value="${hospitals[i].hospital_id}">${hospitals[i].hospital_name}</option>"`
+                hospital_html += `<option value="${hospitals[i].hospital_id}">${hospitals[i].hospital_name}</option>`
                 hospital_dropdown.innerHTML = hospital_html;
             }
         }

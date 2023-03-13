@@ -2,7 +2,7 @@
 
 window.onload = function () {
     const hospital_dropdown = document.getElementById('hospital');
-const employee_dropdown = document.getElementById('employee');
+    const employee_dropdown = document.getElementById('employee');
     const add_btn = document.getElementById('add');
     axios.post('http://localhost:8080/hospitals-backend/get-employees.php').then(function (res) {
         if (res.data.response == "Unavailable employees") {

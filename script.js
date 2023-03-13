@@ -39,20 +39,26 @@ const password = document.getElementById('password').value;
     data.append('password', password)
     axios.post('http://localhost:8080/hospitals-backend/login.php', data).then(function(res){
         if(res.data.response == 'Loggedin' ){
-            if(res.data.response.usertype == 1){
+            if(res.data.usertype == 1){
                 location.replace('')
-                console.log(res.data.response.response)
+                console.log(res.data.response)
+                window.localStorage.setItem('usertype', res.data.usertype_id);
+            window.localStorage.setItem('user_id', res.data.user_id);
             }
-            else if(res.data.response.usertype == 2){
+            else if(res.data.usertype == 2){
                 location.replace('patient.html')
-                console.log(res.data.response.response)
+                console.log(res.data.response)
+                window.localStorage.setItem('usertype', res.data.usertype_id);
+            window.localStorage.setItem('user_id', res.data.user_id);
             }
             else{
                 location.replace('admin-panel.html');
-                console.log(res.data.response.response)
+                console.log(res.data.response)
+                window.localStorage.setItem('usertype', res.data.usertype_id);
+            window.localStorage.setItem('user_id', res.data.user_id);
             }
-            window.localStorage.setItem('usertype', res.data.response.usertype_id);
-            window.localStorage.setItem('user_id', res.data.response.user_id)
+            
+            console.log(res.data.user_id)
         }
     }).catch(function(error){
         console.log(error)
