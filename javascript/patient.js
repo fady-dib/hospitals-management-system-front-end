@@ -2,9 +2,9 @@ const department_dropdown = document.getElementById('department');
 const room_dropdown = document.getElementById('room');
 
 
+
 window.onload = function () {
     user_id = localStorage.getItem('user_id');
-    console.log(user_id)
     console.log(user_id)
 
     let data = new FormData();
@@ -16,7 +16,7 @@ window.onload = function () {
                 html += `<option value="${departments[i].department_id}">${departments[i].department_name}</option>`
                 
             }
-            department_dropdown.innerHTML = html;
+            department_dropdown.insertAdjacentHTML('beforeend',html);
         })
 }
 
