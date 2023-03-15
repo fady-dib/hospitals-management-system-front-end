@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,62 @@
     <link rel="stylesheet" href="style.css">
     <title>Patient page</title>
 </head>
+
 <body>
     <header class="header">
         <div class="name">
             <p>Hospitals management system</p>
         </div>
     </header>
-    <div class="department-room">
-        <div class="department-header">
-            <p>Choose department and room</p>
+    <div class="patient-box-container">
+        <div class="patient-box">
+            <div class="department-room">
+                <div class="department-header">
+                    <h3>Choose department and room:</h3>
+                </div>
+                <form>
+                    <div class="patient-drop-down department-content">
+                        <label for="department">Choose department:</label>
+                        <select name="department" id="department" onchange="fetchRoom()">
+                            <option value="0">Select department</option>
+                        </select>
+                    </div>
+                    <div class="room-content">
+                    <div class="patient-drop-down room">
+                        <label for="room">Choose room:</label>
+                        <select name="room" id="room">
+                        </select>
+                    </div>
+                    <div class="patient-drop-down bed">
+                        <label for="bed">Choose bed:</label>
+                        <select name="bed" id="bed">
+                        </select>
+                    </div>
+                    </div>
+                </form>
+                <button id="add-room" type="submit" onclick="add()">Add room</button>
+            </div>
+            <div class="medication">
+                <div class="medication-header">
+                    <h3>Medication list:</h3>
+                </div>
+                <form class="medication-content">
+                    <div class="medication-drop-down">
+                        <label for="medication-name">Choose medication:</label>
+                        <select name="medication" id="medication" onchange="fetchPrice()">
+                            <option value="0">Select medicament</option>
+                        </select>
+                    </div>
+                    <div class="price-input ">
+                        <label for="price">Price:</label>
+                        <input id="price" disabled>
+                    </div>
+                </form>
+            </div>
         </div>
-        <form class="department-content">
-            <div class="drop-down">
-                <label for="department">Choose department:</label>
-                <select name="department" id="department" onchange="fetchRoom()">
-                    <option value="0">Select department</option>
-                </select>
-            </div>
-            <div class="drop-down">
-                <label for="room">Choose room:</label>
-                <select name="room" id="room" >
-                </select>
-            </div>
-            <div class="drop-down" >
-                <label for="bed">Choose bed:</label>
-                <select name="bed" id="bed" >
-                </select>
-            </div>
-            <button id="add" type="submit" onclick="add()">Add</button>
-        </form>
     </div>
     <script src="axios.min.js"></script>
     <script src="./javascript/patient.js"></script>
 </body>
+
 </html>

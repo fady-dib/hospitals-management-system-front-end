@@ -1,6 +1,7 @@
 const department_dropdown = document.getElementById('department');
 const room_dropdown = document.getElementById('room');
 const bed_dropdown = document.getElementById('bed');
+const medication_list = document.getElementById('medication-list');
 
 window.onload = function () {
     user_id = localStorage.getItem('user_id');
@@ -8,18 +9,26 @@ window.onload = function () {
 
     let data = new FormData();
     data.append('user_id',user_id);
-    axios.post('http://localhost:8080/hospitals-backend/department.php', data).then(function (res) {
+    axios.post('http://localhost:8080/hospitals-backend/patient.php', data).then(function (res) {
             let departments = res.data.departments;
-            let html ="";
+            let medications = res.data.medications;
+            let department_html ="";
+            let medication_html ="";
             for (i = 0; i < departments.length; i++) {
-                html += `<option value="${departments[i].department_id}">${departments[i].department_name}</option>`
+                department_html += `<option value="${departments[i].department_id}">${departments[i].department_name}</option>`
             }
-            department_dropdown.insertAdjacentHTML('beforeend',html);
+            department_dropdown.insertAdjacentHTML('beforeend',department_html);
+
+            for (i = 0; i < medications.length; i++) {
+                medication_html += `<li>${medications[i].medication_name} - price: </li>`
+            }
+            
+            
         })
 }
 
 const fetchRoom = () => {
-    add_btn = document.getElementById('add');
+    add_btn = document.getElementById('add-room');
     let data = new FormData();
     data.append('department_id', department_dropdown.value);
     axios.post('http://localhost:8080/hospitals-backend/room.php', data).then(function(res){
