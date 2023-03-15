@@ -41,7 +41,7 @@
                     </div>
                     </div>
                 </form>
-                <button id="add-room" type="submit" onclick="add()">Add room</button>
+                <button id="add-room" type="submit" onclick="add()">Choose room</button>
             </div>
             <div class="medication">
                 <div class="medication-header">
@@ -50,7 +50,7 @@
                 <form class="medication-content">
                     <div class="medication-drop-down">
                         <label for="medication-name">Choose medication:</label>
-                        <select name="medication" id="medication" onchange="fetchPrice()">
+                        <select name="medication" id="medication-list" onchange="fetchPrice(event)">
                             <option value="0">Select medicament</option>
                         </select>
                     </div>
@@ -59,6 +59,7 @@
                         <input id="price" disabled>
                     </div>
                 </form>
+                <button id="add-medication" type="submit" onclick="add()">Choose medication </button>
             </div>
         </div>
     </div>

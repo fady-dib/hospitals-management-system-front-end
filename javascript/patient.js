@@ -1,7 +1,11 @@
 const department_dropdown = document.getElementById('department');
 const room_dropdown = document.getElementById('room');
 const bed_dropdown = document.getElementById('bed');
-const medication_list = document.getElementById('medication-list');
+const add_btn = document.getElementById('add-room');
+const medication_dropdown = document.getElementById('medication-list');
+const price_input =document.getElementById('price');
+
+let price =[];
 
 window.onload = function () {
     user_id = localStorage.getItem('user_id');
@@ -14,21 +18,31 @@ window.onload = function () {
             let medications = res.data.medications;
             let department_html ="";
             let medication_html ="";
+            console.log(res.data)
+            if(res.data.status ==100){
+                
+            }
             for (i = 0; i < departments.length; i++) {
                 department_html += `<option value="${departments[i].department_id}">${departments[i].department_name}</option>`
             }
             department_dropdown.insertAdjacentHTML('beforeend',department_html);
 
             for (i = 0; i < medications.length; i++) {
-                medication_html += `<li>${medications[i].medication_name} - price: </li>`
+                medication_html += `<option value="${medications[i].medication_id}">${medications[i].medication_name}</option>`;
+                price.push({
+                    id :`${medications[i].medication_id}`,
+                    price :`${medications[i].medication_cost}`
+                })
             }
             
+
+            medication_dropdown.insertAdjacentHTML('beforeend', medication_html);
+
             
         })
 }
-
+console.log(price)
 const fetchRoom = () => {
-    add_btn = document.getElementById('add-room');
     let data = new FormData();
     data.append('department_id', department_dropdown.value);
     axios.post('http://localhost:8080/hospitals-backend/room.php', data).then(function(res){
@@ -56,5 +70,18 @@ const fetchRoom = () => {
      }).catch(function(error){
          console.log(error)
      })
+
+
+}
+
+const fetchPrice = (event)=>{
+   const id =(event.target.value);
+   if(id == 0){
+    price_input.value = ""
+    return;
+   }
+   const search_id = price.find(obj => obj.id == id ); // search the objects inside the array to find specific id and return the object found
+   selected_price = search_id.price
+   price_input.value = selected_price
 
 }

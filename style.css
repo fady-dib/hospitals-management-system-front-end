@@ -270,6 +270,13 @@ label{
 #add-room{
     width:100px;
     margin-top: 30px;
+    background-color: var(--blue-color);
+    color: white;
+    height:7vh
+}
+
+#add-room:disabled{
+    background-color: grey;
 }
 .medication{
     margin-top: 60px;
@@ -336,5 +343,18 @@ label{
 #price{
     width:70px;
     position:relative;
-    left:-70px
+    left:-70px;
+    text-align: center
+}
+
+#add-medication{
+    width:100px;
+    margin-top: 30px;
+    background-color: var(--blue-color);
+    color: white;
+    height:7vh
+}
+
+#add-medication:disabled{
+    background-color: grey;
 }
